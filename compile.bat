@@ -8,9 +8,15 @@ rem USE TO COMPILE GAME
 rem make makefile all
 
 setlocal
-set PATH ="C:\z88dk199b\bin;C:\z88dk199b\game"
+set PATH ="C:\z88dk_1.6\bin;C:\C:\z88dk_1.6\game"
 
-@rem set PATH = c:\z88dk199b\bin;c:\z88dk199b\game
+set Z88DK_PATH=c:\z88dk_1.6
+set PATH=%Z88DK_PATH%\bin;%PATH%
+set Z80_OZFILES=%Z88DK_PATH%\lib\
+set ZCCCFG=%Z88DK_PATH%\lib\config\
+
+
+rem ZCCCFG environment variable
 
 if not exist marker.tmp (
 copy "music\marker.tmp" "marker.tmp"
